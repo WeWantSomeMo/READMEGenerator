@@ -1,0 +1,29 @@
+{
+  "name": "readmegenerator",
+  "version": "1.0.0",
+  "description": "This is a readmeGenerator",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WeWantSomeMo/READMEGenerator.git"
+  },
+  "keywords": [
+    "[\"readMe\"",
+    "\"notes\"",
+    "\"objectives\"]"
+  ],
+  "author": "Mason Anthony Ortiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WeWantSomeMo/READMEGenerator/issues"
+  },
+  "homepage": "https://github.com/WeWantSomeMo/READMEGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "nodemon": "^2.0.20"
+  }
+}

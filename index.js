@@ -1,31 +1,54 @@
-const inquierer = require('inquierer');
+import inquirer from "inquirer"
 const fs = require('./utils/generateMarkdown')
 
-inquierer
+inquirer
     .prompt ([
         {
             type: "input",
-            message: "",
-            name: ""
+            message: "What is the title of your project?",
+            name: "Title"
         },
         {
             type: "input",
-            message: "",
-            name: ""
+            message: "Enter a description",
+            name: "Description"
+        },    {
+            type: "input",
+            message: "How can a user install this app?",
+            name: "Installation"
         },    {
             type: "input",
             message: "",
-            name: ""
+            name: "Usage"
         },    {
             type: "input",
-            message: "",
-            name: ""
-        },    {
+            message: "Who Contributed to this app?",
+            name: "Contributors"
+        },  {
             type: "input",
-            message: "",
-            name: ""
+            message: "How can you test this app?",
+            name: "Test"
+        },  {
+            type: "list",
+            message: "Choose a license for this app",
+            name: "license",
+            choices: ["MIT License", "ISC License", "License to Kill", "No License"]
+
         },
-    ])
+        
+    ]) 
+
+    .then((data) => {
+        console.log(data);
+        fs.writeFile('README.md'), generateMarkdown(data),
+        error => {
+            if (error) {
+                console.log("Please insert data")
+            }
+            console.log("README is now available!")
+        }
+    })
+
 
 
 
