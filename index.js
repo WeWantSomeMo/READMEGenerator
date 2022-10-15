@@ -1,5 +1,6 @@
-import inquirer from "inquirer"
-const fs = require('./utils/generateMarkdown')
+const inquirer = require("inquirer");
+const fs = require("fs");
+const generateMarkdown = require('./Develop/utils/generateMarkdown')
 
 inquirer
     .prompt ([
@@ -40,7 +41,7 @@ inquirer
 
     .then((data) => {
         console.log(data);
-        fs.writeFile('README.md'), generateMarkdown(data),
+        fs.writeFile('README.md', generateMarkdown(data)),
         error => {
             if (error) {
                 console.log("Please insert data")
