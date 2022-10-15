@@ -1,15 +1,8 @@
-function renderLicense(license) {
-    if (license === 'License to Kill') {
-        return 'Very well, Mr. Bond'
-    }
-}
 
-function generateMarkdown(data) {
-    return `
-        - ${data.Title}
+        - Goop
 
         ## Description
-        - ${data.Description}
+        - Poog
 
         ## Table of Contents 
         
@@ -24,49 +17,35 @@ function generateMarkdown(data) {
 
         
         ## License
-        - ${renderLicense(data.license)}
+        - Very well, Mr. Bond
 
         Refer to ['https://choosealicense.com/']('https://chooselicense.com/').$
 
         ## Installation
         To install this application, please follow the steps below:
-        - ${data.Installation}
+        - Download it
 
 
         ## Usage
         ![alt text] (assets/images/screenshot.png)
-        - ${data.Usage}
+        - Clicking
 
         ## Features
-        - ${data.features}
+        - undefined
 
         ## Contributors & Credits
 
-        - ${data.Contributors}
+        - ME
 
         ## Test
 
-        - ${data.Test}
+        - Node js
 
         ## Questions
         If you have questions about the reportError, open an issue or contact me directly at . You can find more of my work at https://github.com/WeWantSomeMo)
 
         ## How to contribute
 
-        - ${data.contribute}
+        - undefined
         The [Contributor Covenant](WEB URL) is an industry standard, but you can always write your own if you'd prefer.
-    `;
-}
-
-module.exports = generateMarkdown;
-// // TODO: Create a function that returns a license badge based on which license is passed in
-// // If there is no license, return an empty string
-// function renderLicenseBadge(license) {}
-
-// // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
-// function renderLicenseLink(license) {}
-
-// // TODO: Create a function that returns the license section of README
-// // If there is no license, return an empty string
-// function renderLicenseSection(license) {}
+    

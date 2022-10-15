@@ -13,15 +13,22 @@ inquirer
             type: "input",
             message: "Enter a description",
             name: "Description"
-        },    {
+        }, 
+        {
             type: "input",
             message: "How can a user install this app?",
             name: "Installation"
         },    {
             type: "input",
-            message: "",
+            message: "How are you going to use this app?",
             name: "Usage"
-        },    {
+        },  {
+            type: "list",
+            message: "Choose a license for this app",
+            name: "license",
+            choices: ["MIT License", "ISC License", "License to Kill", "No License"]
+
+        },  {
             type: "input",
             message: "Who Contributed to this app?",
             name: "Contributors"
@@ -29,26 +36,28 @@ inquirer
             type: "input",
             message: "How can you test this app?",
             name: "Test"
-        },  {
-            type: "list",
-            message: "Choose a license for this app",
-            name: "license",
-            choices: ["MIT License", "ISC License", "License to Kill", "No License"]
-
-        },
+        }, {
+            type: "input",
+            message: "Got any questions?",
+            name: "Questions"
+        }, 
         
     ]) 
 
     .then((data) => {
-        console.log(data);
-        fs.writeFile('README.md', generateMarkdown(data)),
-        error => {
+        // console.log('This is data ln 43', data)
+        // fs.writeFile('test.md', 'This is a string', (error) => {
+        //     console.log('This is a string called created.')
+        // })
+        fs.writeFile( 'README.md', generateMarkdown(data), (error) => {
             if (error) {
-                console.log("Please insert data")
+                console.log(`This is error ${error}`)
+            } else {
+                console.log('File created!')
             }
-            console.log("README is now available!")
-        }
+        })
     })
+        
 
 
 
