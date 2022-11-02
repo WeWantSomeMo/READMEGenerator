@@ -53,7 +53,7 @@ function generateMarkdown(data) {
 
         ## How to contribute
 
-        - ${data.contribute}
+       
         The [Contributor Covenant](WEB URL) is an industry standard, but you can always write your own if you'd prefer.
     `;
 }
